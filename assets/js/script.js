@@ -251,17 +251,31 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // Add event to all nav link
-navigationLinks.forEach((link, index) => {
-     link.addEventListener("click", function () {
-          pages.forEach((page, pageIndex) => {
-               if (index === pageIndex) {
+navigationLinks.forEach((link) => {
+     link.addEventListener("click", function (event) {
+          // Make sure to include 'event' parameter if you plan to use event.preventDefault()
+          const clickedPage = this.textContent.trim().toLowerCase();
+          console.log("Clicked header:", clickedPage); // Log which header was clicked
+
+          pages.forEach((page) => {
+               if (clickedPage === page.dataset.page) {
+                    console.log("Showing page:", page.dataset.page); // Log when a matching page is found and shown
                     page.classList.add("active");
-                    link.classList.add("active");
-                    window.scrollTo(0, 0);
                } else {
                     page.classList.remove("active");
-                    navigationLinks[pageIndex].classList.remove("active");
                }
           });
+
+          navigationLinks.forEach((navLink) => {
+               if (navLink.textContent.trim().toLowerCase() === clickedPage) {
+                    navLink.classList.add("active");
+               } else {
+                    navLink.classList.remove("active");
+               }
+          });
+
+          event.preventDefault(); // Prevent the default action to ensure page doesn't jump or reload
      });
 });
+
+
