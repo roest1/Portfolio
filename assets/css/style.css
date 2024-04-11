@@ -209,10 +209,16 @@ article {
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
 
 article { display: none; }
-
+/**
 article.active {
   display: block;
   animation: fade 0.5s ease backwards;
+}
+*/
+article.active {
+  display: block;
+  animation: fade 0.5s ease;
+  animation-fill-mode: backwards;
 }
 
 @keyframes fade {
@@ -555,10 +561,7 @@ main {
   line-height: 1.6;
 }
 
-
-/**
- * #testimonials 
- */
+ 
 
 .testimonials { margin-bottom: 30px; }
 
@@ -607,10 +610,6 @@ main {
   overflow: hidden;
 }
 
-
-/**
- * #testimonials-modal
- */
 
 .modal-container {
   position: fixed;
@@ -720,11 +719,7 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
-
-/**
- * #clients 
- */
+ 
 
 .clients { margin-bottom: 15px; }
 
@@ -755,9 +750,6 @@ main {
 }
 
 .clients-item img:hover { filter: grayscale(0); }
-
-
-
 
 
 /*-----------------------------------*\
