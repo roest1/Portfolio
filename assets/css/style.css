@@ -261,19 +261,23 @@ article.active {
   border-radius: 3px;
 }
 
-.download-btn {
+.info-content a.title.download-btn {
   display: inline-block;
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 5px; /* Match this to your design */
   background: var(--onyx); /* This is your current button color */
   color: var(--white-1); /* This is your current text color */
   transition: background-color var(--transition-1), color var(--transition-1); /* Smooth transition for hover effect */
+  text-align: center;
+  margin-top: 10px; /* Adjust as needed */
   /* Add any other styles you have for buttons here */
 }
 
-.download-btn:hover {
-  background-color: var(--orange-yellow-crayola); /* Highlight color on hover */
-  color: var(--eerie-black-1); /* Text color on hover */
+.info-content a.title.download-btn:hover {
+  background-color: var(--orange-yellow-crayola) !important; /* Highlight color on hover */
+  color: var(--eerie-black-1) !important; /* Text color on hover */
+  transform: translateY(-2px); /* Optional: slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect on hover */
   /* Add any other hover effects you want here */
 }
 

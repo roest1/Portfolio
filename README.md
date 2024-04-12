@@ -8,7 +8,7 @@ My project portfolio website
 
 ### To Do:
 
-- Add social media links like GitHub, LinkedIn, and Handshake
+- Make contact links clickable (phone number and email)
 
-- Make contact links clickable
+- Finish portfolio with links to their github repos
 
